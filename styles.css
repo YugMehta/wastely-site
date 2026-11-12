@@ -1,0 +1,31 @@
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: #0A0A0B;
+  background: #F5F5F2;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #0A0A0B; }
+a:hover { color: #3A3D3A; }
+button, input, select, textarea { font-family: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #17834A; outline-offset: 2px; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #17834A; outline-offset: 2px; }
+a[style*="border-radius: 999px"], button[style*="border-radius: 999px"] { transition: opacity 0.15s ease; }
+a[style*="border-radius: 999px"]:hover, button[style*="border-radius: 999px"]:hover { opacity: 0.85; }
+summary { cursor: pointer; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+details[open] .pm { transform: rotate(45deg); }
+[hidden] { display: none !important; }
+
+@keyframes sweep { from { top: 20%; } to { top: 74%; } }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+.scanline { animation: sweep 0.7s ease-in-out infinite alternate; }
+.rise { animation: rise 0.35s ease-out both; }
+.pulse { animation: pulse 1s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .scanline, .rise, .pulse { animation: none; }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teamwastely.com/sitemap.xml
